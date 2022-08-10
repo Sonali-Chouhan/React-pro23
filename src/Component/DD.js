@@ -43,7 +43,7 @@ const data = [
   },
 ];
 
-const App = () => {
+const DD = () => {
   const [state, setstate] = useState({});
   useEffect(() => {
     console.log("Ff", state);
@@ -65,4 +65,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default DD;

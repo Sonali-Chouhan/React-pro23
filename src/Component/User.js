@@ -14,6 +14,7 @@ const User = () => {
     const [state, setstate] = useState(getData());
     const [data,setdata]=useState({
     name:'',
+    last:'',
     email:'',
     password:''
 
@@ -24,6 +25,7 @@ const User = () => {
       setdata({
         name:'',
         email:'',
+        last:'',
         password:''
       })
   }
@@ -42,6 +44,7 @@ const User = () => {
     <div>
       <form>
       <input type="text" value={state.name} onChange={(e)=>setdata({...data,name:e.target.value})}/><br/>
+      <input type="text" value={state.last} onChange={(e)=>setdata({...data,lastme:e.target.value})}/><br/>
       <input type="text" value={state.email} onChange={(e)=>setdata({...data,email:e.target.value})}/><br/>
       <input type="text" value={state.password} onChange={(e)=>setdata({...data,password:e.target.value})}/><br/>
       <button onClick={(e)=>handleSubmit(e)} type="submit">Submit</button>
@@ -55,6 +58,7 @@ const User = () => {
                   <tr>
                     <th>#</th>
                     <th>Name</th>
+                    <th>Last</th>
                     <th>Email</th>
                   </tr>
                 </thead>
